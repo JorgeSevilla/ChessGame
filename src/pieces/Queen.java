@@ -13,8 +13,13 @@ public class Queen extends Piece {
 	
 	public ArrayList<Cell> move(Cell state[][], int x, int y){
 		
+		/*Queen has most number of possible moves
+		 * Queen can move any number of steps in all 8 direction
+		 * The possible moves of queen is a combination of Rook and Bishop
+		*/
 		possibleMoves.clear(0);
 		
+		//Checking possible moves in vertical direction
 		int tempx = x - 1;
 		while(tempx >= 0) {
 			if(state[tempx][y].getPiece() == null)
